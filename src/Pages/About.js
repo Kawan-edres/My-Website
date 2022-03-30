@@ -10,14 +10,10 @@ const About = () => {
     <AboutStyle >
      
      
-    
-        <PersonalDetails />
+    <PersonalDetails />
    
-
-  
-    <Skills />
+    {/* <Skills /> */}
    
-    
 
    
     </AboutStyle>
@@ -28,18 +24,10 @@ const About = () => {
 const AboutStyle=styled.div`
 height: 100vh;
 width: 100vw;
-display: flex;
 margin-top: 5rem;
 
 
-.right{
-  
-  width: 80%;
-  height:100vh;
-  background-color: blue;
- 
 
-}
 
 
 
