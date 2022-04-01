@@ -12,7 +12,7 @@ const About = () => {
      
     <PersonalDetails />
    
-    {/* <Skills /> */}
+    <Skills />
    
 
    
@@ -25,7 +25,8 @@ const AboutStyle=styled.div`
 height: 100vh;
 width: 100vw;
 margin-top: 5rem;
-
+overflow-y: scroll;
+overflow-x: hidden;
 
 
 

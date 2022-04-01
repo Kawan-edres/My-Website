@@ -59,14 +59,14 @@ const PersonalDetails = () => {
   );
 };
 
+
 const DetaisStyle = styled.div`
   background-color: white;
-  overflow: hidden;
   width: 100%;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
+  overflow-y: visible !important  ;
   height: 100vh;
-  overflow-y: auto  ;
   
 
   .title {
@@ -300,9 +300,7 @@ const DetaisStyle = styled.div`
 
   .year,.proj{
     width: 40%;
-    h3{
-      font-size: .5rem;
-    }
+   
     }
   
 

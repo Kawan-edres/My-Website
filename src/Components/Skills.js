@@ -54,8 +54,8 @@ const Skills = () => {
 
 const SkillsStyle=styled.div`
 height: 100vh;
-width: 82%;
-margin-top: 50px;
+width: 100%;
+border-top: 10px solid black;
 
 
 .title{
