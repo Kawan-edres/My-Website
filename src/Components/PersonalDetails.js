@@ -265,20 +265,51 @@ const DetaisStyle = styled.div`
     }
 
     .experince{
-      margin-top: 50px;
+      margin-top: 40px;
       width: 100%;
       flex-direction: row;
 
     }
-    .year,.proj{
-    }
+    
 
 
 
   }
 
-  @media (max-width: 400px) {
-    
+  @media (max-width: 420px) {
+  .title{
+    font-size: .6rem;
+    margin-top: 20px;
+  }
+
+  .about-details{
+    h1{
+      font-size:1.2rem;
+
+    }
+  }
+
+  .about-container{
+    margin: 20px 0 0 0;
+    width: 100%;
+  }
+
+  .ul-con li{
+    padding: 1rem;
+  }
+
+  .year,.proj{
+    width: 40%;
+    h3{
+      font-size: .5rem;
+    }
+    }
+  
+
+
+
+
+
   }
 
 
