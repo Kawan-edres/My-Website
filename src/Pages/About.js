@@ -11,8 +11,10 @@ const About = () => {
      
      
     <PersonalDetails />
-   
     <Skills />
+
+   
+    
    
 
    
@@ -22,21 +24,12 @@ const About = () => {
 
 
 const AboutStyle=styled.div`
-height: 100vh;
+height:auto;
 width: 100vw;
 margin-top: 5rem;
 overflow-y: scroll;
 overflow-x: hidden;
 
-
-
-
-
-
-@media screen and (max-width:1000px) {
-  flex-direction: column;
-  
-}
 
 
   

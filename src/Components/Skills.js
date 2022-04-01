@@ -27,23 +27,23 @@ const Skills = () => {
          
     </div>
         
-         <div className='logo'>
-         <div><img src={Html} alt="html" /></div>
-         <div><img src={Css} alt="css" /></div>
-         <div><img src={Js} alt="java script" /></div>
-         <div><img src={Bootstrap} alt="bootstrap" /></div>
-         <div><img src={Tailwind} alt="tailwind" /></div>
-         <div><img src={Ant} alt="ant design" /></div>
-         <div><img src={Styled} alt="styled components" /></div>
-         <div><img src={Sass} alt="sass" /></div>
-         <div><img src={Reactjs} alt="react" /></div>
-         <div><img src={Redux} alt="redux" /></div>
-         <div><img src={Next} alt="next" /></div>
-         <div><img src={Framer} alt="framer motion" /></div>
-         <div><img src={Ts} alt="type scrpit" /></div>
-         <div><img src={Git} alt="git" /></div>
-         <div><img src={Java} alt="java" /></div>
-         <div><img src={MySql} alt="mysql" /></div>
+         <div className='logo-con'>
+         <div className='logo'><img src={Html} alt="html" /></div>
+         <div className='logo'><img src={Css} alt="css" /></div>
+         <div className='logo'><img src={Js} alt="java script" /></div>
+         <div className='logo'><img src={Bootstrap} alt="bootstrap" /></div>
+         <div className='logo'><img src={Tailwind} alt="tailwind" /></div>
+         <div className='logo'><img src={Ant} alt="ant design" /></div>
+         <div className='logo'><img src={Styled} alt="styled components" /></div>
+         <div className='logo'><img src={Sass} alt="sass" /></div>
+         <div className='logo'><img src={Reactjs} alt="react" /></div>
+         <div className='logo'><img src={Redux} alt="redux" /></div>
+         <div className='logo'><img src={Next} alt="next" /></div>
+         <div className='logo'><img src={Framer} alt="framer motion" /></div>
+         <div className='logo'><img src={Ts} alt="type scrpit" /></div>
+         <div className='logo'><img src={Git} alt="git" /></div>
+         <div className='logo'><img src={Java} alt="java" /></div>
+         <div className='logo'><img src={MySql} alt="mysql" /></div>
 
          </div>
     </SkillsStyle>
@@ -55,13 +55,12 @@ const Skills = () => {
 const SkillsStyle=styled.div`
 height: 100vh;
 width: 100%;
-border-top: 10px solid black;
 
 
 .title{
   text-align: center;
   height: 12vh;
-  border: 2px solid black;
+  /* border: 2px solid black;    */
   width: 80%;
   margin: 0 auto;
 
@@ -74,6 +73,10 @@ border-top: 10px solid black;
 }
 
 .logo{
+  border: 2px solid black;
+  padding: 2.5rem;
+}
+.logo-con{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr)) ;
   justify-items: center;
@@ -87,6 +90,49 @@ img{
 }
 
 
+@media screen and  (max-width:1200px) {
+
+  .logo-con{
+  
+  grid-template-columns: repeat(auto-fill,minmax(230px,1fr)) ;
+  
+}
+  
+}
+
+
+@media screen and (max-width:768px) {
+
+  
+
+  .logo{
+    padding: 1rem;
+  }
+
+  .logo-con{
+  
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr)) ;
+  
+}
+ 
+}
+
+
+
+@media screen and (max-width:400px) {
+
+  
+  .logo{
+    padding: .3rem;
+  }
+
+  .logo-con{
+  
+  grid-template-columns: repeat(auto-fill,minmax(150px,1fr)) ;
+  
+}
+  
+}
 
 
 `

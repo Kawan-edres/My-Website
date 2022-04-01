@@ -4,6 +4,7 @@ import Cv from "../Assets/Cv/cv.pdf";
 
 const PersonalDetails = () => {
   return (
+    <div>
     <DetaisStyle>
       <div className="title">
         <h1>About ME</h1>
@@ -21,10 +22,12 @@ const PersonalDetails = () => {
               <li>First Name : Kawan</li>
               <li>Last Name : Idrees</li>
               <li>Birth : Aug16,2000</li>
+              <li>Adress : Erbil,Iraq</li>
             </ul>
             <ul className="second-ul">
               <li>Language : KRD,ENG</li>
-              <li>Adress : Erbil,Iraq</li>
+              <li>Phone : +9647503982829</li>
+              <li>Email: kawanedres211 <br />@gmail.com</li>
               <li>Freelance : Available</li>
             </ul>
           </div>
@@ -50,10 +53,15 @@ const PersonalDetails = () => {
           </div>
         </div>
       </div>
+     
+      <hr />
 
      
      
     </DetaisStyle>
+
+
+    </div>
     
 
   );
@@ -65,8 +73,9 @@ const DetaisStyle = styled.div`
   width: 100%;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  overflow-y: visible !important  ;
-  height: 100vh;
+  overflow-y: visible  ;
+  height: auto;
+
   
 
   .title {
@@ -113,9 +122,8 @@ const DetaisStyle = styled.div`
       font-size: 1.2rem;
     }
   }
-  .second-ul{
-    /* margin-left: 4rem; */
-  }
+  
+  
   .cv{
    
     padding: 1rem;
@@ -184,10 +192,17 @@ const DetaisStyle = styled.div`
     color: white;
 
   }
+  hr{
+    width: 40%;
+    border-top: solid grey 2px;
+    border-bottom:  none;
+    margin: 100px auto ;
+
+  }
 
 @media (max-width:1400px) {
   .experince{
-    width: 30%;
+    width: 35%;
   }
   .year,.proj{
     height: 30%;
@@ -201,12 +216,18 @@ const DetaisStyle = styled.div`
 
   @media (max-width: 1200px) {
 
+    
+      margin: 20px auto 0 auto;
     .year,.proj{
       font-size: 1rem;
       height: 25%;
       width: 75%;
 
     
+    }
+
+    .second-ul li{
+      padding-left: 10px;
     }
   }
 
@@ -270,6 +291,12 @@ const DetaisStyle = styled.div`
       flex-direction: row;
 
     }
+
+    hr{
+    
+    margin: 100px auto 20px auto ;
+    
+  }
     
 
 
