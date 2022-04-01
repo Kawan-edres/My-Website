@@ -69,7 +69,7 @@ const Intro = () => {
       </div>
 
 
-      
+
 
 
      
@@ -91,6 +91,8 @@ overflow-x: hidden;
 
 .home-content{
   padding: 2rem;
+  border-radius: 5px;
+
   width: 80%;
   height: auto;
   margin: 0 auto;

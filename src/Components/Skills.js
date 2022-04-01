@@ -62,6 +62,8 @@ padding-bottom: 5rem;
 .title{
   text-align: center;
     border: 1px solid black;
+    border-radius: 4px;
+
     width: 80%;
     margin: 40px auto 0 auto;
     font-family: "Montserrat", sans-serif;

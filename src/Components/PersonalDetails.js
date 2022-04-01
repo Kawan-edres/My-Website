@@ -79,8 +79,10 @@ const DetaisStyle = styled.div`
   
 
   .title {
+    
     text-align: center;
     border: 1px solid black;
+    border-radius: 4px;
     width: 80%;
     margin: 40px auto 0 auto;
     font-family: "Montserrat", sans-serif;
@@ -135,7 +137,7 @@ const DetaisStyle = styled.div`
       border: 2px solid #e63946 !important ;
       font-size: 1rem;
       padding: .8rem;
-      border-radius: 5px;
+      border-radius: 2px;
 
       a{
         text-decoration: none;  
