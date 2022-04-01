@@ -1,11 +1,13 @@
 import Intro from "../Components/Intro"
 import styled from "styled-components"
+import Footer from "../Components/Footer";
 
 
 const Home = () => {
   return (
    <HomeStyle>
     <Intro />
+    <Footer />
     </HomeStyle>
   );
 }
@@ -15,6 +17,7 @@ const Home = () => {
 
 
 const HomeStyle=styled.div`
+height: auto;
 overflow-x: hidden;
 
 `

@@ -23,7 +23,7 @@ const Skills = () => {
     <SkillsStyle> 
     <div className='title'>
         
-         <h1>Skills</h1>
+         <h1>My Skills</h1>
          
     </div>
         
@@ -53,21 +53,26 @@ const Skills = () => {
 
 
 const SkillsStyle=styled.div`
-height: 100vh;
+height: auto;
 width: 100%;
+padding-bottom: 5rem;
+
 
 
 .title{
   text-align: center;
-  height: 12vh;
-  /* border: 2px solid black;    */
-  width: 80%;
-  margin: 0 auto;
+    border: 1px solid black;
+    width: 80%;
+    margin: 40px auto 0 auto;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 4px;
+    box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
 
   h1{
-    font-size: 3rem;
+    
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
     }
 
 }
@@ -75,7 +80,7 @@ width: 100%;
 .logo{
   border: 2px solid black;
   padding: 2.5rem;
-}
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 .logo-con{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr)) ;
@@ -83,6 +88,7 @@ width: 100%;
   align-items: center;
   grid-row-gap: 2rem;
   margin-top: 100px;
+
 }
 img{
   width: 100%;
@@ -103,6 +109,10 @@ img{
 
 @media screen and (max-width:768px) {
 
+  .title{
+      font-size: .8rem;
+    }
+
   
 
   .logo{
@@ -121,6 +131,10 @@ img{
 
 @media screen and (max-width:400px) {
 
+  .title{
+      font-size: .6rem;
+    }
+
   
   .logo{
     padding: .3rem;
@@ -133,6 +147,8 @@ img{
 }
   
 }
+
+
 
 
 `

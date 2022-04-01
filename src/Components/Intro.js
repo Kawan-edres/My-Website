@@ -69,6 +69,9 @@ const Intro = () => {
       </div>
 
 
+      
+
+
      
      
 
@@ -89,7 +92,7 @@ overflow-x: hidden;
 .home-content{
   padding: 2rem;
   width: 80%;
-  height: 70vh;
+  height: auto;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -176,7 +179,7 @@ overflow-x: hidden;
   position: absolute;
   column-gap: 6em;
   left: 35%;
-  top: 80%;
+  top: 75%;
 }
 .experience,
 .projects{
@@ -227,6 +230,7 @@ overflow-x: hidden;
 
 @media (max-width:1200px) and (min-width: 1024px) {
 
+
   .content{
     margin-top: 40px;
   }
@@ -257,9 +261,11 @@ overflow-x: hidden;
 
 
 @media screen and (max-width:1024px) {
+  padding: 100px 0px 100px 0px;
+
  
   .home-content{
-    margin: 250px auto 0 auto;
+    margin: 0px auto ;
     flex-direction: column-reverse;
     padding-bottom: 8rem; 
 
@@ -290,6 +296,7 @@ overflow-x: hidden;
     width: 100%;
     left: 0;
     justify-content: center;
+    top:85%;
   }
   
 }
@@ -297,7 +304,6 @@ overflow-x: hidden;
 @media screen and (max-width:768px) {
   .home-content{
      box-shadow: none;
-    /* margin-top: 50px; */
 
   }
   .content{
@@ -325,7 +331,6 @@ overflow-x: hidden;
 
 @media  (max-width:633px) {
   .home-content{
-    margin-top: 60px;
   }
 
   
@@ -354,9 +359,7 @@ overflow-x: hidden;
   
 
 @media  (max-width:500px) {
-  .home-content{
-    margin-top: 100px;
-  }
+ 
   .content{
     padding-left: 0;
   }
@@ -385,9 +388,7 @@ overflow-x: hidden;
 }
 
 @media  (max-width:408px) {
-  .home-content{
-    margin-top: 160px;
-  }
+  
 
   .year{
     margin-top: 10px;
@@ -407,12 +408,7 @@ overflow-x: hidden;
     
 }}
 
-@media  (max-width:300px) {
-  .home-content{
-    margin-top: 250px;
-  }
 
-}
 
 
 

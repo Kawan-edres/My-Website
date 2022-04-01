@@ -21,12 +21,12 @@ const PersonalDetails = () => {
             <ul>
               <li>First Name : Kawan</li>
               <li>Last Name : Idrees</li>
-              <li>Birth : Aug16,2000</li>
+              <li>Phone : +9647503982829</li>
               <li>Adress : Erbil,Iraq</li>
             </ul>
             <ul className="second-ul">
               <li>Language : KRD,ENG</li>
-              <li>Phone : +9647503982829</li>
+              <li>Birth : Aug16,2000</li>
               <li>Email: kawanedres211 <br />@gmail.com</li>
               <li>Freelance : Available</li>
             </ul>
@@ -108,9 +108,7 @@ const DetaisStyle = styled.div`
 
   ul{
     padding:0;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+   
     width: 50%; 
 
   }
@@ -123,7 +121,7 @@ const DetaisStyle = styled.div`
     }
   }
   
-  
+
   .cv{
    
     padding: 1rem;

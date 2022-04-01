@@ -2,22 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import Skills from '../Components/Skills'
 import PersonalDetails from '../Components/PersonalDetails'
+import Footer from '../Components/Footer'
 
 
 
 const About = () => {
   return (
     <AboutStyle >
-     
-     
+    
+  
     <PersonalDetails />
     <Skills />
+    <Footer />
 
-   
-    
-   
-
-   
     </AboutStyle>
   )
 }
