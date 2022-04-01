@@ -65,16 +65,20 @@ const DetaisStyle = styled.div`
   width: 100%;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
-  height: 80vh;
+  height: 100vh;
+  overflow-y: auto  ;
   
 
   .title {
     text-align: center;
-    border: 2px solid black;
+    border: 1px solid black;
     width: 80%;
     margin: 40px auto 0 auto;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 4px;
+    box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
   }
 
   .about-container {
@@ -154,9 +158,10 @@ const DetaisStyle = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+  }
     .proj,
     .year {
+      text-align: center;
       border: 2px solid #e63946;
       color: black;
       font-size: 1.3rem;
@@ -167,7 +172,7 @@ const DetaisStyle = styled.div`
       height: 35%;
       margin: 2.3rem;
       transition: all .3s ease;
-    }
+    
   }
 
    .year:hover{
@@ -180,24 +185,105 @@ const DetaisStyle = styled.div`
 
   }
 
-
-  hr{
-    margin-top: 1rem ;
-    width: 10%;
-    margin: 0 auto;
-
-    border-top: 10px solid red;
+@media (max-width:1400px) {
+  .experince{
+    width: 30%;
   }
+  .year,.proj{
+    height: 30%;
+    font-size: 1.1rem;
+    margin: 1rem !important;
+
+  }
+  
+}
+ 
+
+  @media (max-width: 1200px) {
+
+    .year,.proj{
+      font-size: 1rem;
+      height: 25%;
+      width: 75%;
+
+    
+    }
+  }
+
 
   @media (max-width: 1024px) {
 
+    .ul-con li{
+      padding: 1.5rem;
+      font-size: 1rem;
+    }
+    .year,.proj{
+      height:23%;
+      margin: .5rem !important;
+
+    }
+    .year h3,.experince h3{
+      font-size: 1rem;
+    
+    }
+
+  }
+
+  @media (max-width: 768px) {
+
+    .title{
+      font-size: .8rem;
+    }
     .about-container{
       flex-direction: column;
-      text-align: center;
+
+    }
+    .about-details{
+      width: 100%;
+      padding: 0;
+
+      h1{
+        font-size:1.4rem;
+        letter-spacing: 2px;
+      }
+
+    }
+
+    .ul-con li{
+      font-size: .7rem;
+    }
+    .cv{
+      padding: 0;
+      width: 100%;
+      display: flex;
       justify-content: center;
       align-items: center;
     }
+    .cv .cv-button{
+      margin-top: 30px;
+      padding: 0.5rem;
+    }
+
+    .experince{
+      margin-top: 50px;
+      width: 100%;
+      flex-direction: row;
+
+    }
+    .year,.proj{
+    }
+
+
+
   }
+
+  @media (max-width: 400px) {
+    
+  }
+
+
 `;
+
+
 
 export default PersonalDetails;
