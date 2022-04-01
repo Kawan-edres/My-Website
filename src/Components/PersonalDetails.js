@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import kawan from "../Assets/Images/kk.png";
 import Cv from "../Assets/Cv/cv.pdf";
 
 const PersonalDetails = () => {
@@ -12,9 +11,7 @@ const PersonalDetails = () => {
 
       {/* 1 */}
       <div className="about-container">
-        <div className="about-img">
-          <img src={kawan} alt="" />
-        </div>
+       
 
         {/* 2 */}
         <div className="about-details">
@@ -25,7 +22,7 @@ const PersonalDetails = () => {
               <li>Last Name : Idrees</li>
               <li>Birth : Aug16,2000</li>
             </ul>
-            <ul>
+            <ul className="second-ul">
               <li>Language : KRD,ENG</li>
               <li>Adress : Erbil,Iraq</li>
               <li>Freelance : Available</li>
@@ -36,24 +33,29 @@ const PersonalDetails = () => {
           <div className="cv">
             <button className="cv-button">
               <a className="download-cv" href={Cv} download>
-                Download My Cv
+                DOWNLOAD CV
               </a>
             </button>
           </div>
         </div>
 
-        {/* 3 */}
+        {/* 3  */}
 
-        {/* <div className="experince">
+         <div className="experince">
           <div className="year">
-            <h3>1Year Experince</h3>
+            <h3>1 Year <br /> Experince</h3>
           </div>
           <div className="proj">
-            <h3>17Completed Projects</h3>
+            <h3>17 Completed <br /> Projects</h3>
           </div>
-        </div> */}
+        </div>
       </div>
+
+     
+     
     </DetaisStyle>
+    
+
   );
 };
 
@@ -62,6 +64,9 @@ const DetaisStyle = styled.div`
   overflow: hidden;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  height: 80vh;
+  
 
   .title {
     text-align: center;
@@ -76,57 +81,75 @@ const DetaisStyle = styled.div`
     margin: 40px auto 0 auto;
     width: 80%;
     display: flex;
-    border: 2px solid magenta;
-    justify-content: center ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        justify-content: center ;
   }
-  .about-img {
-    border: 2px green solid;
-    width: 30%;
-    img {
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      object-fit: cover;
-    }
-  }
-
+  
   .about-details {
-    border: 2px solid blue;
     padding: 10px;
-    width: 70%;
+    width: 60%;
     h1 {
       margin-left: 30px;
     }
   }
 
+  ul{
+    padding:0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 50%; 
+
+  }
   .ul-con {
     display: flex;
     li {
       list-style: none;
-      padding: 1rem;
+      padding: 2rem;
       font-size: 1.2rem;
     }
   }
+  .second-ul{
+    /* margin-left: 4rem; */
+  }
   .cv{
-    /* justify-content: center; */
-    /* background-color: wheat; */
-
+   
+    padding: 1rem;
     .cv-button{
-      background-color: #e63946;
-      padding: 15px;
+    
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      background-color: white;
+      color: black;
+      border: 2px solid #e63946 !important ;
+      font-size: 1rem;
+      padding: .8rem;
+      border-radius: 5px;
+
       a{
         text-decoration: none;  
-        border: none;
-        outline: none;
-        color: white;
+        color: black;
+        font-family: 'Roboto',sans-serif;
+        letter-spacing: 1px;
+        
       }
       border: none;
     }
   }
 
+  .cv-button:hover{
+    a{
+    color: white;
+
+  }
+  color: white;
+  background-color: #e63946;
+  font: bolder;
+  }
+
   .experince {
-    border: 2px solid orange;
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,15 +157,36 @@ const DetaisStyle = styled.div`
 
     .proj,
     .year {
-      border-bottom: 2px solid black;
-      background-color: #cfe1b9;
-      font-size: 1.2rem;
+      border: 2px solid #e63946;
+      color: black;
+      font-size: 1.3rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 50%;
       height: 35%;
+      margin: 2.3rem;
+      transition: all .3s ease;
     }
+  }
+
+   .year:hover{
+    background-color: #e63946;
+    color: white;
+  }
+  .proj:hover{
+    background-color: #e63946;
+    color: white;
+
+  }
+
+
+  hr{
+    margin-top: 1rem ;
+    width: 10%;
+    margin: 0 auto;
+
+    border-top: 10px solid red;
   }
 
   @media (max-width: 1024px) {

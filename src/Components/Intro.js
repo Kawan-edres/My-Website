@@ -87,6 +87,7 @@ padding: 200px 0px 60px 0px;
 overflow-x: hidden;
 
 .home-content{
+  padding: 2rem;
   width: 80%;
   height: 70vh;
   margin: 0 auto;
