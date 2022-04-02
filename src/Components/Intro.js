@@ -391,6 +391,8 @@ overflow-x: hidden;
 }
 
 @media  (max-width:408px) {
+
+  padding-bottom: 0;
   
 
   .year{
