@@ -138,6 +138,7 @@ const DetaisStyle = styled.div`
       font-size: 1rem;
       padding: .8rem;
       border-radius: 2px;
+      transition: transform 0.3s ease;
 
       a{
         text-decoration: none;  
@@ -151,13 +152,19 @@ const DetaisStyle = styled.div`
   }
 
   .cv-button:hover{
+    color: white;
+    background-color: #e63946;
+    font: bolder;
+   
     a{
     color: white;
 
   }
-  color: white;
-  background-color: #e63946;
-  font: bolder;
+ 
+  }
+  .cv-button:active{
+    transform: scale(.9);
+
   }
 
   .experince {

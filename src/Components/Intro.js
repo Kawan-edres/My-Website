@@ -36,7 +36,7 @@ const Intro = () => {
            </div>
 
            {/* button */}
-           <motion.button onClick={()=>buttonAbout("/about")} style={{cursor:"pointer"}} drag dragConstraints={{left: 0,top:0,right:0,bottom:0}}>More About Me</motion.button>
+           <motion.button onClick={()=>buttonAbout("/about")}  drag dragConstraints={{left: 0,top:0,right:0,bottom:0}}>More About Me</motion.button>
 
           
            
@@ -166,6 +166,7 @@ overflow-x: hidden;
   background-color: #e63946;
   font: bolder;
 }
+
 
  img{
   width: 100%;

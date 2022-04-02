@@ -82,7 +82,12 @@ padding-bottom: 5rem;
 .logo{
   border: 2px solid black;
   padding: 2.5rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform .3s ease;
+}
+.logo:hover{
+  transform:matrix( 1.2, 0, 0, 1.2, 0, 0);
+}
 .logo-con{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr)) ;
