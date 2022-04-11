@@ -2,10 +2,12 @@ import React from 'react'
 import styled from "styled-components";
 
 const Footer = () => {
+
+  const curretnYear = new Date().getFullYear();
   return (
     <FooterStyle>
 
-         <p>© Kawan Idrees. <br className='br'/> A Front-End Developer</p>
+         <p>© Kawan Idrees. <br className='br'/> <strong>{curretnYear}</strong></p>
     </FooterStyle>
   )
 }

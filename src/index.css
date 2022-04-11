@@ -8,8 +8,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+ 
 }
+
 
 button{
   cursor: pointer;
@@ -17,6 +18,8 @@ button{
 }
 a{
   text-decoration: none;
+  cursor: pointer;
+  
 }
 
 

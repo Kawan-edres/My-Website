@@ -11,26 +11,28 @@ const Navbar = () => {
 
   // use state hook for handling a navbar humburger
   const [navActive,setNavActive]=useState(false);
+  const [mobileNav,setMobileNav]=useState(false);
   return (
     
     <Navigation >
     <div onClick={()=>setNavActive(false)} className={`${navActive?"overlay":""}`}></div>
  
    <div className='nav-container'>
-    <h1 id='logo'><NavLink to="/">Kawan</NavLink></h1>
+    <h1 id='logo'><a href='#'>Kawan</a></h1>
 
 
 
     <ul className={`${navActive?"nav-active":""}`}>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="projects">Projects</NavLink></li>
-        <li><NavLink to="contact">Contact</NavLink></li>
+   
+        <li  onClick={()=>setNavActive(!navActive)}  ><a  href='#'>Home</a></li>
+        <li  onClick={()=>setNavActive(!navActive)}  ><a  href='#Skills'>Skills</a></li>
+        <li  onClick={()=>setNavActive(!navActive)}  ><a  >Projects</a></li>
+        <li  onClick={()=>setNavActive(!navActive)}  ><a >Contact</a></li>
     </ul>
 
     
     {/* humburger */}
-    <div className={`burger ${navActive?"style":""}`}   onClick={()=>{setNavActive(!navActive)}}>
+    <div className={`burger ${navActive?"style":""}`}   onClick={()=>setNavActive(!navActive)}>
       <div className='line1'></div>
       <div className='line2'></div>
       <div className='line3'></div>
@@ -171,7 +173,7 @@ li:hover a{
     width:50%;
     right: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     background-color: #e63946;
     flex-direction: column;
     align-items: center;

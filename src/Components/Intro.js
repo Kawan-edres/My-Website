@@ -7,6 +7,8 @@ import {ReactComponent as In} from '../Assets/Contact/in.svg'
 import {ReactComponent as Facebook} from '../Assets/Contact/facebook.svg'
 import {ReactComponent as Github} from '../Assets/Contact/github.svg'
 import {ReactComponent as Twitter} from '../Assets/Contact/twitter.svg'
+import Cv from "../Assets/Cv/cv.pdf";
+
 
 
 
@@ -16,13 +18,13 @@ const Intro = () => {
   
   
   return (
-    <IntroStyle>
+    <IntroStyle id='Home'>
       <div className="home-content">
       
 
         <motion.div className="content">
           <p className='hi'>Hi There.</p>
-          <h1><span>I'm Kawan Idrees</span><br className='br' /> A Front-End Developer.</h1>
+          <h1><span className='name'>I'm Kawan Idrees</span><br className='br' />Front-End  Developer...</h1>
           <p className='info'>I'm a front-end developer and software engineer,<br/> focused on web developmnet and I'm so extied <br />
           with creating excelent and professional websites <br /> and improving it for modern life. 
            </p>
@@ -36,7 +38,9 @@ const Intro = () => {
            </div>
 
            {/* button */}
-           <motion.button onClick={()=>buttonAbout("/about")}  drag dragConstraints={{left: 0,top:0,right:0,bottom:0}}>More About Me</motion.button>
+           <motion.button   drag dragConstraints={{left: 0,top:0,right:0,bottom:0}}>   <a className="" href={Cv} download>
+                DOWNLOAD CV
+              </a></motion.button>
 
           
            
@@ -75,7 +79,7 @@ const Intro = () => {
      
      
 
-      
+      <hr />
     </IntroStyle>
    
   )
@@ -89,6 +93,11 @@ background-color:white;
 padding: 200px 0px 60px 0px;
 overflow-x: hidden;
 
+hr{
+  width: 50%;
+  margin: 10rem auto 0 auto;
+  border-top: 2px solid #000;
+}
 .home-content{
   padding: 2rem;
   border-radius: 5px;
@@ -121,10 +130,18 @@ overflow-x: hidden;
   
 }
 
-.content span{
+
+.content .name{
   color: #e63946;
   text-shadow: 1px 1px 1px black;
 } 
+
+
+
+
+
+
+
 .info{
   font-size: 1.6rem; 
   overflow-wrap: break-word;
@@ -150,11 +167,13 @@ overflow-x: hidden;
   text-decoration: none;
   display: inline-block;
   background-color: white;
-  color: black;
   border: 2px solid #e63946 ;
   font-size: 1.5rem;
   padding: 1rem;
   border-radius: 5px;
+  a{
+   color:black
+  }
 }
 
 .content button:hover   { 
