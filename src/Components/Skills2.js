@@ -14,7 +14,10 @@ const Skills = () => {
 
 
     <StyledSkills >
-    <h6>Drag left to see all skills </h6>
+    <div className='drag-con'>
+    <h6>Drag Me  <div class="arrow-5"></div> </h6>
+    </div>
+   
          <motion.div ref={carousel} className='carousel' whileTap={{cursor:"grabbing"}}>
 
          <motion.div drag='x' dragConstraints={{right:0,left:-width}} className='inner-carousel'>
@@ -41,12 +44,49 @@ const Skills = () => {
 }
 
 const StyledSkills = styled.div`
+
+.drag-con{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 h6{
   font-size:1rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
   color: #e63946;
+
+
+  
+
+.arrow-5 {
+  width:50px;
+  height:30px;
+  display: grid;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.arrow-5:before,
+.arrow-5:after {
+  content: "";
+  grid-area: 1/1;
+  background: currentColor;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation: a5 1s infinite;
+  transform: translate(calc(0% + var(--s,0%)));
+}
+
+.arrow-5:after {
+  --s:-100%;
+}
+
+@keyframes a5 {
+  80%,100%{transform: translate(calc(100% + var(--s,0%)))}
+}
+
+
 }
 
 .item{

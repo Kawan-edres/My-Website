@@ -4,8 +4,8 @@ import SkillsImages from './SkillsImages'
 
 const Skills = () => {
   return (
-    <SkillsStyle id='Skills'> 
-    <div className='title'>
+    <SkillsStyle > 
+    <div id='Skills' className='title'>
         
          <h1>My Skills</h1>
          
@@ -36,7 +36,7 @@ const SkillsStyle=styled.div`
 height: auto;
 width: 100%;
 padding-bottom: 5rem;
-margin-top: 5rem;
+/* margin-top: 5rem; */
 
 
 
@@ -62,13 +62,14 @@ margin-top: 5rem;
 }
 
 .logo{
+  width: 50%;
   border: 2px solid black;
   padding: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: transform .2s ease;
 }
 .logo:hover{
-  transform:matrix( 1.2, 0, 0, 1.2, 0, 0);
+  transform:matrix( 1.1, 0, 0, 1.1, 0, 0);
 }
 .logo-con{
 
@@ -77,7 +78,6 @@ margin-top: 5rem;
   justify-items: center;
   align-items: center;
   grid-row-gap: 2rem;
-  grid-column-gap: 1rem;
   margin-top: 100px;
   padding: 15px;
 
@@ -85,7 +85,7 @@ margin-top: 5rem;
 }
 img{
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 
