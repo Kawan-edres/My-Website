@@ -97,6 +97,7 @@ hr{
   width: 50%;
   margin: 10rem auto 0 auto;
   border-top: 2px solid #000;
+  opacity: 0;
 }
 .home-content{
   padding: 2rem;
@@ -346,6 +347,10 @@ hr{
     height: 300px;
     
 
+  }
+
+  hr{
+    opacity: 1;
   }
   
   

@@ -3,12 +3,15 @@ import styled from 'styled-components';
 
 
 
+
 import Home from "./Pages/Home"
 import About from './Pages/About';
 import Projects from "./Pages/Projects"
 import Contact from "./Pages/Contact"
 import Navbar from './Components/Navbar';
 import ScrollTop from './Components/ScrollTop';
+import Footer from "./Components/Footer";
+
 
 
 
@@ -25,6 +28,8 @@ function App() {
 
     <main>
     <Home />
+    <Projects />
+    <Footer />
    
        
         {/* <Routes>

@@ -26,7 +26,7 @@ const Navbar = () => {
    
         <li  onClick={()=>setNavActive(!navActive)}  ><a  href='#'>Home</a></li>
         <li  onClick={()=>setNavActive(!navActive)}  ><a  href='#Skills'>Skills</a></li>
-        <li  onClick={()=>setNavActive(!navActive)}  ><a  >Projects</a></li>
+        <li  onClick={()=>setNavActive(!navActive)}  ><a href='#Projects'  >Projects</a></li>
         <li  onClick={()=>setNavActive(!navActive)}  ><a >Contact</a></li>
     </ul>
 

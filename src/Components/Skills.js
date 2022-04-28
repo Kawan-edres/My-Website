@@ -26,6 +26,8 @@ const Skills = () => {
            }
 
          </div>
+
+         <hr />
     </SkillsStyle>
   )
 }
@@ -42,7 +44,7 @@ padding-bottom: 5rem;
 
 
 .title{
-  text-align: center;
+   text-align: center;
     border: 1px solid black;
     border-radius: 4px;
 
@@ -57,6 +59,8 @@ padding-bottom: 5rem;
   h1{
     
     text-align: center;
+    margin: 0;
+    padding: .7rem;
     }
 
 }
@@ -73,8 +77,10 @@ padding-bottom: 5rem;
 }
 .logo-con{
 
+  width: 80%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr)) ;
+  grid-template-columns: repeat(auto-fit,minmax(270px,1fr)) ;
   justify-items: center;
   align-items: center;
   grid-row-gap: 2rem;
