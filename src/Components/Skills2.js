@@ -37,6 +37,7 @@ const Skills = () => {
            </motion.div>
 
          </motion.div>
+         <hr className='hr' />
 
          </StyledSkills>
   
@@ -44,6 +45,10 @@ const Skills = () => {
 }
 
 const StyledSkills = styled.div`
+
+.hr{
+  margin-top: 200px;
+}
 
 .drag-con{
   width: 100%;
@@ -81,6 +86,7 @@ h6{
 .arrow-5:after {
   --s:-100%;
 }
+
 
 @keyframes a5 {
   80%,100%{transform: translate(calc(100% + var(--s,0%)))}

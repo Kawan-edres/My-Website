@@ -29,7 +29,7 @@ function App() {
     <main>
     <Home />
     <Projects />
-    <Footer />
+    {/* <Footer /> */}
    
        
         {/* <Routes>

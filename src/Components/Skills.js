@@ -27,7 +27,7 @@ const Skills = () => {
 
          </div>
 
-         <hr />
+         <hr className='hr' />
     </SkillsStyle>
   )
 }
@@ -92,6 +92,11 @@ padding-bottom: 5rem;
 img{
   width: 100%;
   object-fit: cover;
+}
+
+.hr{
+
+  margin-top: 200px;
 }
 
 
