@@ -117,6 +117,9 @@ img{
       font-size: .8rem;
     }
 
+    .hr{
+      display: none;
+    }
   
 
   .logo{

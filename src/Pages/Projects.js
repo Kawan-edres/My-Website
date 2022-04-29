@@ -37,7 +37,7 @@ const Projects = () => {
 
         <ProjectsCard
           img={Typing}
-          title="Typing"
+          title="Typing Test "
           tolls="Html, Css, Boolma Css, JS, React"
           link="https://kawan-edres.github.io/Typing-Test-Accuracy/"
         />
@@ -66,19 +66,19 @@ const Projects = () => {
           img={Drum1}
           title="Drum Music App"
           tolls="Html, Css, JS, React"
-          link="https://kawan-edres.github.io/Tic-Tac-Toe-Game/"
+          link="https://drum-music-app.vercel.app/"
         />
         <ProjectsCard
           img={Wall}
           title="Wall Game"
           tolls="Html, Css, JS, React"
-          link="https://kawan-edres.github.io/Tic-Tac-Toe-Game/"
+          link="https://kawan-edres.github.io/Wall-game/"
         />
         <ProjectsCard
           img={Drum2}
           title="Drum Music App"
           tolls="Html, Css, JS, React"
-          link="https://kawan-edres.github.io/Tic-Tac-Toe-Game/"
+          link="https://react-drum-music.vercel.app/"
         />
       </div>
 
