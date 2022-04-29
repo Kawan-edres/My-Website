@@ -15,7 +15,7 @@ const Skills = () => {
 
     <StyledSkills >
     <div className='drag-con'>
-    <h6>Drag Me  <div class="arrow-5"></div> </h6>
+    <h6>Drag Me  <div className="arrow-5"></div> </h6>
     </div>
    
          <motion.div ref={carousel} className='carousel' whileTap={{cursor:"grabbing"}}>
