@@ -22,35 +22,33 @@ const Projects = () => {
 
       <div className="cards-container">
         <ProjectsCard
+          img={Movie }
+          title="Movie Api "
+          tolls="Html, Css, Framer, JS, React ,Api"
+          link="https://kawan-edres.github.io/Movie-WebSite/"
+        />
+
+        <ProjectsCard
           img={Instgram}
           title="Instagram"
           tolls="Html, Css, Tailwind CSS ,JS , React"
           link="https://kawan-edres.github.io/instgram-clone/"
         />
-        <ProjectsCard
-          img={Movie}
-          title="Movie "
-          tolls="Html, Css, Framer, JS, React"
-          link="https://kawan-edres.github.io/Movie-WebSite/"
-        />
-        <ProjectsCard
-          img={Todo}
-          title="To Do "
-          tolls="Html, Css, JS, React"
-          link="https://kawan-edres.github.io/My-Todo/"
-        />
+
         <ProjectsCard
           img={Typing}
           title="Typing"
           tolls="Html, Css, Boolma Css, JS, React"
           link="https://kawan-edres.github.io/Typing-Test-Accuracy/"
         />
+
         <ProjectsCard
-          img={Portfolio}
-          title="Portfolio"
-          tolls="Html, Css, Framer, JS, React"
-          link="https://kawan-edres.github.io/Capture-Portofolio/"
+          img={Todo}
+          title="To Do "
+          tolls="Html, Css, JS, React"
+          link="https://kawan-edres.github.io/My-Todo/"
         />
+
         <ProjectsCard
           img={Tic}
           title="Tic Tac Toe"
@@ -58,8 +56,15 @@ const Projects = () => {
           link="https://kawan-edres.github.io/Tic-Tac-Toe-Game/"
         />
         <ProjectsCard
+          img={Portfolio}
+          title="Portfolio"
+          tolls="Html, Css, Framer, JS, React"
+          link="https://kawan-edres.github.io/Capture-Portofolio/"
+        />
+
+        <ProjectsCard
           img={Drum1}
-          title="Wall Game"
+          title="Drum Music App"
           tolls="Html, Css, JS, React"
           link="https://kawan-edres.github.io/Tic-Tac-Toe-Game/"
         />
@@ -71,18 +76,20 @@ const Projects = () => {
         />
         <ProjectsCard
           img={Drum2}
-          title="Wall Game"
+          title="Drum Music App"
           tolls="Html, Css, JS, React"
           link="https://kawan-edres.github.io/Tic-Tac-Toe-Game/"
         />
       </div>
+
+      <hr />
     </ProjectsStyle>
   );
 };
 
 const ProjectsStyle = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100vh;  
 
   .title {
     text-align: center;
@@ -115,6 +122,8 @@ const ProjectsStyle = styled.div`
     justify-items: center;
   }
 
+  
+
   @media screen and (max-width: 1400px) {
     .cards-container {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -123,13 +132,10 @@ const ProjectsStyle = styled.div`
     @media screen and (max-width: 800px) {
       .cards-container {
         grid-row-gap: 3rem;
-       grid-column-gap: 1.7rem;
-        
+        grid-column-gap: 1.7rem;
       }
     }
   }
-
-
 `;
 
 export default Projects;
