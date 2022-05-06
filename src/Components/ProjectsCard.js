@@ -1,15 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// animations
+import {motion} from 'framer-motion';
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 
 
 
 const ProjectsCard = ({img ,title,tolls,link}) => {
+
+  const[ref,inView]=useInView({
+    threshold:0.3,
+   
+  });
+  const animation=useAnimation();
+ 
+    //intro animation
+   
+    if(inView){
+      animation.start({
+        x:0,
+        opacity: 1,
+        transition: {ease:"easeOut",type:"spring", duration:1.3},
+      });     
+    }
+
+    if(!inView){
+      animation.start({x:-800,opacity:0,transition: {ease:"easeOut", duration:1.3}});
+    }
+
+  
+
   return (
 
     
-      <Card >
+      <Card  ref={ref}>
+      <motion.div animate={animation}>
         <div className="ui-card">
         <img src={img} alt="" />
           <div className="des">
@@ -20,6 +48,7 @@ const ProjectsCard = ({img ,title,tolls,link}) => {
             <a href={link} target="_blank">See Project</a>
           </div>
         </div>
+        </motion.div>
       </Card>
   )
 }
