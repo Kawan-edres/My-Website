@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ProjectsCard from "../Components/ProjectsCard";
 
+
 // card images
 import Movie from "../Assets/Projects/movie.jpg";
 import Typing from "../Assets/Projects/typing.jpg";
@@ -13,14 +14,22 @@ import Drum2 from "../Assets/Projects/drum2.png";
 import Wall from "../Assets/Projects/wall.png";
 import Instgram from "../Assets/Projects/instagram.webp";
 
+
+
+
 const Projects = () => {
+
+
+  
+        
   return (
-    <ProjectsStyle>
-      <div id="Projects" className="title">
+    <ProjectsStyle    id="Projects">
+    <div   >
+      <div  className="title">
         <h1>Projects</h1>
       </div>
 
-      <div className="cards-container">
+      <div  className="cards-container">
         <ProjectsCard
           img={Movie }
           title="Movie Api "
@@ -83,13 +92,14 @@ const Projects = () => {
       </div>
 
       <hr />
+
+      </div>
     </ProjectsStyle>
   );
 };
 
 const ProjectsStyle = styled.div`
-  width: 100%;
-  height: 100vh;  
+
 
   .title {
     text-align: center;

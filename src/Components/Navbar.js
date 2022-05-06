@@ -18,13 +18,13 @@ const Navbar = () => {
     <div onClick={()=>setNavActive(false)} className={`${navActive?"overlay":""}`}></div>
  
    <div className='nav-container'>
-    <h1 id='logo'><a href='#'>Kawan</a></h1>
+    <h1 id='logo'><a href='#Home'>Kawan</a></h1>
 
 
 
     <ul className={`${navActive?"nav-active":""}`}>
    
-        <li  onClick={()=>setNavActive(!navActive)}  ><a  href='#'>Home</a></li>
+        <li  onClick={()=>setNavActive(!navActive)}  ><a  href='#Home'>Home</a></li>
         <li  onClick={()=>setNavActive(!navActive)}  ><a  href='#Skills'>Skills</a></li>
         <li  onClick={()=>setNavActive(!navActive)}  ><a href='#Projects'  >Projects</a></li>
         <li  onClick={()=>setNavActive(!navActive)}  ><a >Contact</a></li>

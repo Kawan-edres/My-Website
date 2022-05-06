@@ -5,12 +5,13 @@ import styled from 'styled-components';
 
 
 import Home from "./Pages/Home"
-import About from './Pages/About';
 import Projects from "./Pages/Projects"
 import Contact from "./Pages/Contact"
 import Navbar from './Components/Navbar';
 import ScrollTop from './Components/ScrollTop';
 import Footer from "./Components/Footer";
+import Skills from './Components/Skills';
+import Skills2 from './Components/Skills2';
 
 
 
@@ -28,6 +29,8 @@ function App() {
 
     <main>
     <Home />
+    <Skills />
+    <Skills2 />
     <Projects />
     {/* <Footer /> */}
    

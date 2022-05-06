@@ -8,6 +8,7 @@ import styled from 'styled-components'
 const ProjectsCard = ({img ,title,tolls,link}) => {
   return (
 
+    
       <Card >
         <div className="ui-card">
         <img src={img} alt="" />
@@ -63,7 +64,6 @@ const Card= styled.div`
     left: 0;
     bottom: 0;
     padding: 1rem;
-    /* text-align: center; */
     margin: 0 auto;
     color: #fff;
     font-size: 18px;

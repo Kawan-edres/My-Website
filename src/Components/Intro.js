@@ -1,24 +1,63 @@
 import React from "react";
 import styled from "styled-components";
 import kawan from "../Assets/Images/kk.png";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+// SVG
 import { ReactComponent as In } from "../Assets/Contact/in.svg";
 import { ReactComponent as Facebook } from "../Assets/Contact/facebook.svg";
 import { ReactComponent as Github } from "../Assets/Contact/github.svg";
 import { ReactComponent as Twitter } from "../Assets/Contact/twitter.svg";
 import Cv from "../Assets/Cv/cv.pdf";
+// animations
+import {motion} from 'framer-motion';
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { useAnimation } from "framer-motion";
 
 const Intro = () => {
-  const buttonAbout = useNavigate();
+
+  const[ref,inView]=useInView({
+    threshold:0.5,
+  });
+  const animation=useAnimation();
+  const imgAnimation=useAnimation();
+  useEffect(()=>{
+    // intro animation
+    if(inView){
+      animation.start({
+        y:0,
+        opacity: 1,
+        transition:{type:"spring",duration:1.3 ,bounce:0.3}
+      });
+//     photo animation 
+      imgAnimation.start({
+        scale:1,
+        opacity: 1,
+        transition: {ease:"easeOut", duration:1},
+      });
+    }
+
+
+
+    if(!inView){
+      animation.start({y:-1000,opacity:0});
+      imgAnimation.start({scale:1.3,opacity:0});
+    }
+
+  },[inView]);
 
   return (
-    <IntroStyle id="Home">
-      <div className="home-content">
-        <motion.div className="content">
-          <p className="hi">Hi There.</p>
-          <h1>
-            <span className="name">I'm Kawan Idrees</span>
+    <IntroStyle ref={ref} id="Home">
+
+      <div  className="home-content">
+        <motion.div  className="content"
+       
+         animate={animation}
+        
+        
+        >
+          <p  className="hi">Hi There.</p>
+          <h1  >
+            <span   className="name">I'm Kawan Idrees</span>
             <br className="br" />
             Front-End Developer...
           </h1>
@@ -78,13 +117,14 @@ const Intro = () => {
               DOWNLOAD CV
             </a>
           </motion.button>
+          {/* end of content */}
         </motion.div>
 
         {/* middle */}
-        <div className="year">
+        <motion.div animate={imgAnimation} className="year">
           <div
             style={{ cursor: "pointer" }}
-            onClick={() => buttonAbout("/about")}
+           
             className="experience"
           >
             <h1>1</h1>
@@ -96,22 +136,22 @@ const Intro = () => {
 
           <div
             style={{ cursor: "pointer" }}
-            onClick={() => buttonAbout("/projects")}
+           
             className="projects"
           >
-            <h1>17</h1>
+            <h1>9</h1>
             <h6>
               Completed
               <br />
               Projects
             </h6>
           </div>
-        </div>
+        </motion.div>
 
         {/* img */}
-        <div className="home-img">
+        <motion.div animate={imgAnimation}  className="home-img">
           <img src={kawan} alt="Kawan's Photo" />
-        </div>
+        </motion.div>
       </div>
 
       <hr />
@@ -120,15 +160,14 @@ const Intro = () => {
 };
 
 const IntroStyle = styled.div`
-  height: fit-content;
-  width: 100vw;
+  width: 100%;
   background-color: white;
   padding: 200px 0px 60px 0px;
-  overflow-x: hidden;
 
   .home-content {
     padding: 2rem;
     border-radius: 5px;
+    
 
     width: 80%;
     height: auto;

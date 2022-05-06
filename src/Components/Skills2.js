@@ -14,6 +14,11 @@ const Skills = () => {
 
 
     <StyledSkills >
+    <div id='Skills' className='title'>
+        
+        <h1 >My Skills</h1>
+        
+   </div>
     <div className='drag-con'>
     <h6>Drag Me  <div className="arrow-5"></div> </h6>
     </div>
@@ -46,6 +51,27 @@ const Skills = () => {
 
 const StyledSkills = styled.div`
 
+.title{
+   text-align: center;
+    border: 1px solid black;
+    border-radius: 4px;
+
+    width: 80%;
+    margin: 40px auto 0 auto;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 4px;
+    box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 4px 18px -3px rgba(0,0,0,0.75);
+
+  h1{
+    
+    text-align: center;
+    margin: 0;
+    padding: .7rem;
+    }
+
+}
 .hr{
   margin-top: 200px;
 }

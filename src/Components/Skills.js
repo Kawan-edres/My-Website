@@ -2,12 +2,42 @@ import React from 'react'
 import styled from 'styled-components'
 import SkillsImages from './SkillsImages'
 
+// animations
+import {motion} from 'framer-motion';
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+
 const Skills = () => {
+
+  const[ref,inView]=useInView({
+    threshold:0.3,
+   
+  });
+  const animation=useAnimation();
+ 
+    //intro animation
+   
+    if(inView){
+      animation.start({
+        x:0,
+        opacity: 1,
+        transition: {ease:"easeOut",type:"spring", duration:.75},
+      });     
+    }
+
+    if(!inView){
+      animation.start({x:-800,opacity:0,transition: {ease:"easeOut", duration:.75}});
+    }
+
+  
+
+
   return (
-    <SkillsStyle > 
+    <SkillsStyle ref={ref}  > 
+    <motion.div   animate={animation}>
     <div id='Skills' className='title'>
         
-         <h1>My Skills</h1>
+         <h1 id='Skills'>My Skills</h1>
          
     </div>
         
@@ -27,6 +57,7 @@ const Skills = () => {
 
          </div>
 
+         </motion.div>
          <hr className='hr' />
     </SkillsStyle>
   )
@@ -35,9 +66,9 @@ const Skills = () => {
 
 
 const SkillsStyle=styled.div`
-height: auto;
 width: 100%;
 padding-bottom: 5rem;
+
 /* margin-top: 5rem; */
 
 
@@ -114,7 +145,7 @@ img{
 @media screen and (max-width:768px) {
 
   .title{
-      font-size: .8rem;
+      display: none;
     }
 
     .hr{
