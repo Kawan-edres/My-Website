@@ -244,6 +244,7 @@ const IntroStyle = styled.div`
     border-radius: 50%;
     box-shadow: 0px 60px 40px -7px rgba(192, 202, 206, 0.5);
     float: right;
+    
   }
 
   .year {
